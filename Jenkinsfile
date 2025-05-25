@@ -4,7 +4,9 @@ pipeline {
     stages {
     
         stage("Install") {
-            sh 'pip install -r requirements.txt'
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
         }
 
         stage ("Test") {
